@@ -1,4 +1,3 @@
-// routes/messages.js
 const express = require("express");
 const router = express.Router();
 const Message = require("../models/Message");
@@ -22,3 +21,6 @@ router.get("/:sender/:receiver", async (req, res) => {
   }).sort({ timestamp: 1 });
   res.json(messages);
 });
+
+// ✅ Don't forget this!
+module.exports = router;
